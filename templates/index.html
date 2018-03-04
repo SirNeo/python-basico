@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+
+{% block titlePage %} {{titlePage}}!! {% endblock %}
+
+{% block content %}
+
+    <h4>Hola desde template: {{name}}</h4>
+    <p>Edad: {{age}}</p>
+
+    {% if (age > 18)  %}
+        <p>Es mayor de edad</p>
+    {% endif %}
+
+    {% for item in lista %}
+        <p> {{item}} </p>
+    {% endfor %}
+
+    {% from "macro.html" import show_list_h %}
+    {{ show_list_h('prueba') }}
+
+{% endblock %}
