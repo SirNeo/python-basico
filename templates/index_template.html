@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Flask!</title>
+</head>
+<body>
+   <h4>Hola desde template: {{name}}</h4>
+   <p>Edad: {{age}}</p>
+
+    {% if (age > 18)  %}
+        <p>Es mayor de edad</p>
+    {% endif %}
+
+    {% for item in lista %}
+        <p> {{item}} </p>
+    {% endfor %}
+</body>
+</html>
